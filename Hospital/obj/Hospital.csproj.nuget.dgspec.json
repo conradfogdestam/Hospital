@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital\\Hospital.csproj": {}
+    "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital.csproj": {}
   },
   "projects": {
-    "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital\\Hospital.csproj": {
+    "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital\\Hospital.csproj",
+        "projectUniqueName": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital.csproj",
         "projectName": "Hospital",
-        "projectPath": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital\\Hospital.csproj",
+        "projectPath": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital.csproj",
         "packagesPath": "C:\\Users\\conra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital\\obj\\",
+        "outputPath": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\conra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,30 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

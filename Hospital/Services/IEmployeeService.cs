@@ -9,6 +9,6 @@ namespace Hospital.Services
 
         List<Employee> UpdateEmployee(Employee updateEmployee);
 
-        List<Employee> DeleteEmployee(Employee employeeToDelete);
+        List<Employee> DeleteEmployee(int Id);
     }
 }

@@ -5,41 +5,43 @@ namespace Hospital.Services
 {
     public class EmployeeService : IEmployeeService
     {
-        private static List<Employee> EmployeeList = new List<Employee>()
-        {
-            new Employee() { EmployeeId = 1, Name = "sss", Age = 112, positionOfEmployee = EmployeePosition.Doctor},
-            new Employee() { EmployeeId = 2, Name = "ddd", Age = 69, positionOfEmployee = EmployeePosition.Nurse}
-        };
-
+        public readonly DataContext ConmanDb;
+        public EmployeeService(DataContext connysaurusdb) 
+        { 
+            ConmanDb = connysaurusdb;
+        }
         public List<Employee> GetEmployeeList()
         {
-            return EmployeeList;
+            return ConmanDb.Employees.ToList();
         }
         public List<Employee> AddEmployee(Employee newEmployee)
         {
-            EmployeeList.Add(newEmployee);
-            return EmployeeList;
+            ConmanDb.Employees.Add(newEmployee);
+            ConmanDb.SaveChanges();
+            return ConmanDb.Employees.ToList();
         }
         public List<Employee> UpdateEmployee(Employee updateEmployee)
         {
-            var foundEmployee = EmployeeList.FirstOrDefault(Employee => Employee.EmployeeId == updateEmployee.EmployeeId );
+            var foundEmployee = ConmanDb.Employees.FirstOrDefault(x => x.EmployeeId == updateEmployee.EmployeeId);
 
-            if (foundEmployee != null)
+            if (foundEmployee is not null)
             {
                 foundEmployee.Name = updateEmployee.Name;
                 foundEmployee.Age = updateEmployee.Age;
+                ConmanDb.SaveChanges();
             }
-            return EmployeeList;
+            return ConmanDb.Employees.ToList();
         }
 
-        public List<Employee> DeleteEmployee(Employee employeeToDelete)
+        public List<Employee> DeleteEmployee(int Id)
         {
-            var foundStudent = EmployeeList.FirstOrDefault(Employee => Employee.EmployeeId == employeeToDelete.EmployeeId);
-            if (foundStudent != null)
+            var foundStudent = ConmanDb.Employees.FirstOrDefault(x => x.EmployeeId == Id);
+            if (foundStudent is not null)
             {
-                EmployeeList.Remove(foundStudent);
+                ConmanDb.Employees.Remove(foundStudent);
+                ConmanDb.SaveChanges();
             }
-            return EmployeeList;
+            return ConmanDb.Employees.ToList();
         }
 
     }

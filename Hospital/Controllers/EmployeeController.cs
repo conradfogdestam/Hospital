@@ -32,7 +32,7 @@ namespace Hospital.Controllers
             return Ok (_employeeService.UpdateEmployee(updateEmployee));
         }
         [HttpDelete]
-        public ActionResult<List<Employee>> DeleteEmployee(Employee EmployeeToDelete)
+        public ActionResult<List<Employee>> DeleteEmployee(int EmployeeToDelete)
         {
             return Ok(_employeeService.DeleteEmployee(EmployeeToDelete));
         }

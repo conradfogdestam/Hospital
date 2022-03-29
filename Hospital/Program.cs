@@ -1,6 +1,10 @@
+using Hospital.Models;
 using Hospital.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DataContext>(Conman => Conman.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
