@@ -2482,11 +2482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital.csproj",
+      "projectUniqueName": "C:\\Users\\conra\\Documents\\GitHub\\Hospital\\Hospital\\Hospital.csproj",
       "projectName": "Hospital",
-      "projectPath": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\Hospital.csproj",
+      "projectPath": "C:\\Users\\conra\\Documents\\GitHub\\Hospital\\Hospital\\Hospital.csproj",
       "packagesPath": "C:\\Users\\conra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\conra\\source\\repos\\conradfogdestam\\Hospital\\Hospital\\obj\\",
+      "outputPath": "C:\\Users\\conra\\Documents\\GitHub\\Hospital\\Hospital\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\conra\\AppData\\Roaming\\NuGet\\NuGet.Config",
